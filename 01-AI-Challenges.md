@@ -84,5 +84,21 @@ offensive content, restricting access to sensitive information…)
 - Automation: of all stages, including data ingestion, pre-processing, training, etc…
 - Continuous Integration: test models consistently
 - Continuous Delivery: of model in productions
-- Continuous Monitoring
+-Continuous Monitoring
 ![alt text](image-19.png)
+
+## Human Centered Design Principle
+- To help decision-makers prevent mistakes in stressful or high-pressure environments, the key Human-Centered Design (HCD) principle is `Error Prevention`. 
+- This principle focuses on designing systems that reduce the likelihood of human errors by simplifying information, providing clear visual cues, using safeguards and confirmations, and offering real-time feedback. 
+- The goal is to minimize cognitive overload and guide decision-makers toward correct actions, especially under pressure.
+
+#### In the context of decision-making under pressure, the following strategies are commonly employed:
+
+- Simplification and Clarity:
+    - Reduce the complexity of information and choices available to decision-makers.
+- Visual Cues and Signage:
+    - Use clear visual cues (e.g., color codes, alerts, warnings) to help prioritize actions and draw attention to critical information.
+- Prevention of Common Errors:
+    - Anticipate frequent errors (e.g., incorrect inputs, overlooked steps) and design systems that prevent them automatically, such as through constraints or defaults.
+    - Use confirmations or safeguards (e.g., double-checking actions or requiring explicit confirmations) to prevent costly mistakes.
+- Feedback Mechanisms
