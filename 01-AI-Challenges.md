@@ -35,6 +35,17 @@ monitoring, evaluation
 ![alt text](image-13.png)
 ![alt text](image-14.png)
 ![alt text](image-15.png)
+- Partial Dependence Blocks are another way to increase transparency.
+#### Partial Dependence Blocks
+**Partial Dependence Blocks (PDBs)** are used in the context of machine learning to help visualize and understand the relationship between a particular feature (or a set of features) and the predicted outcome of a model. They are part of model interpretability techniques and are closely related to **Partial Dependence Plots (PDPs)**.
+
+##### Key Points:
+- **Definition**: A Partial Dependence Block is a segment or subcomponent of a machine learning model that helps isolate the impact of one or more features on the predicted outcome, while holding other features constant.
+- **Purpose**: It provides insight into how a single feature (or a pair of features) affects the prediction, helping to interpret complex models like decision trees, random forests, or gradient boosting machines.
+- **Usage**: When you have a model with many features, PDBs can show how changing one feature influences the model’s output, without interference from the other features. This can help in understanding model behavior and making decisions based on feature importance.
+
+#### Example:
+Imagine a predictive model for house prices. A **partial dependence block** could isolate the feature "square footage" and show how the predicted price changes as square footage increases, holding all other features (like location, number of bedrooms) constant.
 ## Challenges of AI
 ### Toxicity
 - Challenges
