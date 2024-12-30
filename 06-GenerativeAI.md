@@ -167,6 +167,14 @@ It can generate new data based on the data it was trained on.
     ![image.png](AWS%20Certified%20AI%20Practitioner%2014e898cf4c9e80b79415dc48856fae87/image%206.png)
     
 ## Terms Used:
+. Increase the temperature:
+
+The temperature setting controls the creativity and variability of the model's responses. A higher temperature (e.g., 0.8–1.0) makes the model more creative and likely to generate more diverse or longer responses. A lower temperature (e.g., 0.2–0.5) makes the model more focused and deterministic. Increasing the temperature may not guarantee short responses and could lead to more verbose or unpredictable outputs. If you want short, controlled answers, it's better to adjust the prompt directly.
+## Increase the Top K value:
+- The Top K setting controls how many of the top possible next tokens the model considers when generating text. 
+- Increasing Top K can make the output more diverse by allowing the model to sample from a broader set of token options. This can lead to longer or more complex responses, which isn't ideal if you're looking for short and concise answers.
+---
+## Accuracy
 - Accuracy measures the proportion of correct predictions made by the model.
     - It is calculated as:
 Accuracy = Number of correct predictions/ Total number of predictions 
@@ -202,3 +210,55 @@ Interpretability: Decision trees are highly interpretable because you can easily
 - What it is: Neural Networks are complex models inspired by the human brain, and they are particularly good at learning patterns in large datasets. They consist of layers of interconnected nodes (neurons) that process the input data through complex transformations.
 - How it works: Neural networks can learn very non-linear relationships between gene characteristics and the output categories. They are powerful for complex tasks like image recognition or speech recognition. However, neural networks are often called "black-box" models because it’s hard to interpret exactly how they arrive at their predictions.
 - Interpretability: Neural networks are not very interpretable by design, meaning it’s difficult to understand how individual gene features influence the model’s predictions. You would need additional tools (like LIME or SHAP) to interpret the model’s behavior.
+
+**Named Entity Recognition (NER)** is a **Natural Language Processing (NLP)** technique that identifies and classifies **named entities** in text into predefined categories. These entities typically represent specific objects or concepts, such as **names of people**, **organizations**, **locations**, **dates**, and more. The goal of NER is to extract meaningful, structured information from unstructured text.
+
+### **Key Components of NER:**
+1. **Named Entities**: These are specific entities mentioned in a text, often proper nouns or references to notable items. Examples include:
+   - **People**: "Albert Einstein", "Barack Obama"
+   - **Organizations**: "Apple Inc.", "United Nations"
+   - **Locations**: "New York", "Paris", "Mount Everest"
+   - **Dates/Time**: "January 1, 2024", "last Friday"
+   - **Money/Quantities**: "$500", "100 kilograms"
+   - **Other Legal/Domain-Specific Terms**: "Patent #12345", "Clause 4.2"
+
+2. **Categories**: The NER system classifies these named entities into predefined categories, such as:
+   - **PERSON**: Names of individuals or groups (e.g., "Elon Musk")
+   - **ORG**: Names of organizations or companies (e.g., "Tesla", "United Nations")
+   - **LOC**: Locations, cities, countries (e.g., "London", "France")
+   - **DATE**: Specific dates (e.g., "July 4, 1776")
+   - **TIME**: Specific times (e.g., "5 PM", "morning")
+   - **MONEY**: Monetary values (e.g., "$100", "€50")
+   - **PERCENT**: Percentages (e.g., "25%")
+   - **MISC**: Miscellaneous, which doesn't fit into other categories (e.g., brands, product names)
+
+### **How NER Works:**
+1. **Text Preprocessing**: The first step in NER is to clean and prepare the text, which involves removing noise (such as special characters, punctuation), tokenizing the text (splitting the text into words or phrases), and standardizing it.
+   
+2. **Entity Detection**: The NER algorithm then scans the text and detects words or phrases that are likely to be named entities. For instance, it might recognize that "Elon Musk" is a **PERSON** and "Tesla" is an **ORG**.
+
+3. **Classification**: Once entities are detected, the system classifies them into predefined categories. For example, in the sentence "Elon Musk founded Tesla in 2003," "Elon Musk" is labeled as a **PERSON**, "Tesla" as an **ORG**, and "2003" as a **DATE**.
+
+4. **Output**: The output is typically a set of labeled entities, which can be used for further analysis, such as building databases, answering questions, or summarizing content.
+
+### **Example:**
+For the sentence:
+- **Sentence**: "Barack Obama was born in Honolulu on August 4, 1961, and later became the President of the United States."
+
+- **NER Output**:
+  - **PERSON**: "Barack Obama"
+  - **LOC**: "Honolulu"
+  - **DATE**: "August 4, 1961"
+  - **ORG**: "United States"
+
+### **Applications of NER:**
+- **Information Extraction**: Automatically extracting structured information from unstructured text, such as news articles, legal documents, or medical reports.
+- **Question Answering**: Helping AI systems answer questions by identifying key entities in the text.
+- **Search Engine Optimization**: Improving search engine results by understanding key entities in documents or queries.
+- **Content Categorization**: Organizing content based on recognized entities, like categorizing news articles or legal documents.
+- **Legal and Compliance**: Extracting critical entities like contract terms, dates, and clauses from legal texts for review or analysis.
+
+### **Summary:**
+**Named Entity Recognition (NER)** is a technique used in natural language processing to automatically detect and classify named entities (like people, places, dates, organizations) within a text. It is especially useful for extracting structured information from large volumes of unstructured data, such as legal documents, news articles, and social media posts. NER helps in organizing and analyzing text by turning it into actionable information.
+## Amazon Comprehend
+Amazon Comprehend is a fully managed Natural Language Processing (NLP) service that can extract insights from text. One of its key features is Entity Recognition, which allows it to identify and classify named entities like people, organizations, locations, dates, and more from unstructured text.
