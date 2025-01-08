@@ -43,7 +43,8 @@ vulnerabilities in function code and package dependencies
 - Portal that provides customers with on-demand access to AWS compliance documentation 
 - Artifact Reports - Allows you to download AWS security and compliance documents from third-party auditors, like AWS ISO certifications, Payment
 Card Industry (PCI), and System and Organization Control (SOC) reports.
-- On-demand access to security compliance reports of Independent Software Vendors (ISVs)
+- On-demand access to security compliance reports of `Independent Software Vendors (ISVs)`
+    - AWS Artifact can notify users when new `compliance reports are available,`.
 - ISV compliance reports will only be accessible to the AWS customers` who have been granted access to AWS Marketplace`
 
 ## AWS Audit Manager
